@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Class'lari paralel calistirma" parallel="classes" thread-count="3" >
+    <test name="Paralel calisma">
+        <classes>
+            <class name="tests.FirstGridTest"></class>
+            <class name="tests.SecondGridTest"></class>
+            <class name="tests.ThirdGridTest"></class>
+        </classes>
+    </test>
+</suite>
+
+        <!--
+           1- Paralel Test yapmamizin amaci yapilacak olan test sayisindaki fazlaligi
+            ön görülenden daha kisa zamanda kosabilmek icindir.
+          2- Paralel calistirma yapmak istedigimizde gerek frameworkun buna uygun olmamasi gerekse de
+           kullanilan sistemimizin paralel kosumda yeterli performansi gösterememesinden dolayi fail
+           olan test sayimiz cogalir
+
+
+            1- parallel : Calisma esnasinda görev paylasiminin hangi seviyede oldugunu gösterir
+            2- thread-count : Ayni anda kac tane browser'in acilacagini gösterir.
+        -->
